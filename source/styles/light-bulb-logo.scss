@@ -1,0 +1,43 @@
+#glow {
+	z-index: -100;
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	background: transparent;
+	border-radius: 15px;
+	box-shadow: 0 0 0 0 transparent;
+	top: 8px;
+	left: 19px;
+	transition: all 0.5s ease-in-out;
+}
+
+#Layer_1 {
+	z-index: 10;
+	height: 45px;
+    padding: 0;
+    margin-top: -11px;
+
+	.cls-2,
+	.cls-3,
+	#glow {
+		transition: all 0.5s ease-in-out;
+	}
+
+	&:hover {
+		.cls-2 {
+			fill: #f69220;
+		}
+
+		.cls-3 {
+			fill: white !important;
+		}
+	}
+
+	&:hover ~ #glow {
+		z-index: -100;
+		position: absolute;
+		background: #eb9809;
+		border-radius: 90px;
+	    box-shadow: 0 0 60px 5px #eb9809;
+	}
+}
